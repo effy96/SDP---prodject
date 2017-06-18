@@ -1,23 +1,9 @@
-﻿/**
-*
-* Solution to homework task
-* Data Structures Course
-* Faculty of Mathematics and Informatics of Sofia University
-* Winter semester 2016/2017
-*
-* @author  Elizabet Mihaylova
-* @idnumber 45194
-* @task 2
-* @compiler VC
-*
-*/
 #ifndef _Byte_ifstream
 #define _Byte_ifstream
 using namespace std;
 #include <iostream>
 #include <fstream>
 #include <vector> 
-
 #include"Huffman_tree.h"
  
 

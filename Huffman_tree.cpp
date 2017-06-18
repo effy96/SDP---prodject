@@ -1,22 +1,7 @@
-﻿/**
-*
-* Solution to homework task
-* Data Structures Course
-* Faculty of Mathematics and Informatics of Sofia University
-* Winter semester 2016/2017
-*
-* @author  Elizabet Mihaylova
-* @idnumber 45194
-* @task 2
-* @compiler VC
-*
-*/
 #include "Huffman_tree.h"
 #include <fstream>
 #include<iostream>
 #include <queue>  
-//I am including <queue> for using priority queue
-//because i wanted to make the project work and then to write implementation for template priority queue
 using namespace std;
 Huffman_tree::Huffman_tree()
 {
@@ -222,4 +207,122 @@ void Huffman_tree::return_file_content(Huffman_tree* current, vector<bool>& enco
 		return;
 	}
 }
- 
+///////////////////////////////////////////////////////////////--------------------------------------------------------------------------------------------------------------------------------
+/*bool Huffman_tree::read_huffman_tree(const char * file_name)
+{
+	Byte_ifstream file;
+	file.open(file_name);
+	
+	size = 0;
+	vector < bool> bit_structure;
+	vector<unsigned char> leafs;
+	file.read_huffman_tree(size, bit_structure, leafs);
+	cout << "?!?!?!?!?!?!?!?!------ READ HUFFMAN TREE ------?!?!?!?!?!?!?!??!!" << endl;
+	cout << "size " << size << endl;
+	for (size_t i = 0; i < bit_structure.size(); i++)
+	{
+		cout << bit_structure.at(i);
+	}
+	cout << endl;
+	for (size_t i = 0; i < leafs.size(); i++)
+	{
+		cout << "Leaf " << i << " " << leafs.at(i) << endl;
+	}
+	cout << "?!?!?!?!?!?!?!?!?!?!?!?!?!??!?!?!?!?!?!?!??!?!?!?!?!?!?!?!?!?!?!?!?!?" << endl;
+
+	return true;
+}
+
+Huffman_tree* Huffman_tree::build_huffman_tree_from_file(Huffman_tree * current, vector<bool>& bit_structure, vector<unsigned char>& leafs, unsigned & i, unsigned & j)
+{
+	
+
+
+}
+
+
+Huffman_tree* Huffman_tree::read_huffman_tree_from_file(const char* file_name)
+{
+
+	Byte_ifstream file;
+	file.open(file_name);
+	__int16 size_in_bits;
+	vector<bool> bit_structure;
+	vector<unsigned char> leafs;
+	file.read_huffman_tree(size_in_bits, bit_structure, leafs);
+
+	cout << "?!?!?!?!?!?!?!?!------ READ HUFFMAN TREE ------?!?!?!?!?!?!?!??!!" << endl;
+	cout << "size " << size_in_bits << endl;
+	for (size_t i = 0; i < bit_structure.size(); i++)
+	{
+		cout << bit_structure.at(i);
+	}
+	cout << endl;
+	for (size_t i = 0; i < leafs.size(); i++)
+	{
+		cout << "Leaf " << i << " " << leafs.at(i) << endl;
+	}
+	cout << "?!?!?!?!?!?!?!?!?!?!?!?!?!??!?!?!?!?!?!?!??!?!?!?!?!?!?!?!?!?!?!?!?!?" << endl;
+
+
+	unsigned i = 0;
+	unsigned j = 0;
+	return build_huffman_tree_from_file(this, bit_structure, leafs, i, j);
+
+}
+
+void Huffman_tree::return_file_content(Huffman_tree* current, vector<bool>& encoded_data, vector<unsigned char>& data, unsigned & i)
+{
+	if (i == encoded_data.size())
+		return;
+	if (current->left == nullptr&current->right == nullptr)
+	{
+		i++;
+		data.push_back(current->symbol);
+	}
+	if (encoded_data.at(i) == 0)
+	{
+		i++;
+		return_file_content(current->left, encoded_data, data, i);
+	}
+	if (encoded_data.at(i) == 1)
+	{
+		i++;
+		return_file_content(current->right, encoded_data, data, i);
+	}
+}
+
+bool Huffman_tree::encode(const char * original_file, const char * result_file)
+{
+	Huffman_tree* tree = build(original_file);
+	tree->save_huffman_tree(result_file);
+	ifstream read_file(original_file, ios::binary);
+	if (!read_file.is_open())
+		throw 45194;
+
+	Byte_ofstream save_file;
+	save_file.open(result_file);
+	//save_file.save_numb_chars(tree->frequency);
+
+	while (!read_file.eof())
+	{
+		vector<bool> symbol_code;
+		unsigned char tmp;
+		read_file.read((char*)&tmp, sizeof(unsigned char));
+		get_symbol_code(tree, tmp, symbol_code);
+		save_file.add_bool_arr(symbol_code);
+	}
+	save_file.close();
+	read_file.close();
+
+
+
+	return false;
+}
+
+bool Huffman_tree::decode(const char * encoded_file, const char *decoded_file)
+{
+	return false;
+
+}
+*/

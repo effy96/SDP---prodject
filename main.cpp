@@ -1,18 +1,7 @@
-﻿/**
-*
-* Solution to homework task
-* Data Structures Course
-* Faculty of Mathematics and Informatics of Sofia University
-* Winter semester 2016/2017
-*
-* @author  Elizabet Mihaylova
-* @idnumber 45194
-* @task 2
-* @compiler VC
-*
-*/
 #include <iostream> 
-#include <fstream>  
+#include <fstream>
+#include<vector>
+#include <bitset>
 #include "Byte_ifstream.h"	
 #include"Byte_ofstream.h"
 #include "Huffman_tree.h"

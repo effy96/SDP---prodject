@@ -1,17 +1,5 @@
-﻿#include "Byte_ifstream.h"
-/**
-*
-* Solution to homework task
-* Data Structures Course
-* Faculty of Mathematics and Informatics of Sofia University
-* Winter semester 2016/2017
-*
-* @author  Elizabet Mihaylova
-* @idnumber 45194
-* @task 2
-* @compiler VC
-*
-*/
+#include "Byte_ifstream.h"
+
 
 Byte_ifstream::Byte_ifstream()
 {
@@ -105,23 +93,7 @@ Huffman_tree *& Byte_ifstream::read_huffman_tree()
 	read_data_for_building_tree(size, bit_structure, leafs);
 	Huffman_tree* result=new Huffman_tree;
 	unsigned i = 0, j = 0;
-	result = result->build_from_structure(result,bit_structure, leafs, i, j);
-	/*
-	cout << "?!?!?!?!?!?!?!?!------ READ HUFFMAN TREE --- BYTE IFSTREAM---?!?!?!?!?!?!?!??!!" << endl;
-	cout << "size " << size << endl;
-	for (size_t i = 0; i < bit_structure.size(); i++)
-	{
-		cout << bit_structure.at(i);
-	}
-	cout << endl;
-	for (size_t i = 0; i < leafs.size(); i++)
-	{
-		cout << "Leaf " << i << " " << leafs.at(i) << endl;
-	} 
-	cout << endl;
-	cout << "?!?!?!?!?!?!?!?!?!?!?!?!?!??!?!?!?!?!?!?!??!?!?!?!?!?!?!?!?!?!?!?!?!?" << endl;
-	*/
-
+	result = result->build_from_structure(result,bit_structure, leafs, i, j)
 	return result;
 
 }

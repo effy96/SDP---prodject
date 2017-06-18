@@ -1,22 +1,7 @@
-﻿/**
-*
-* Solution to homework task
-* Data Structures Course
-* Faculty of Mathematics and Informatics of Sofia University
-* Winter semester 2016/2017
-*
-* @author  Elizabet Mihaylova
-* @idnumber 45194
-* @task 2
-* @compiler VC
-*
-*/
 #ifndef  _Huffman_tree
 #define  _Huffman_tree
 #include <iostream>
 #include <vector> 
-// I am including <vector> because i wanted to make the project work 
-//and then to write implementation for template class vector 
 using namespace std;
 struct Huffman_tree
 {
@@ -59,7 +44,22 @@ struct Huffman_tree
 	Huffman_tree(unsigned __int32, Huffman_tree *&l, Huffman_tree*&r);
 	~Huffman_tree();
 
- 
+	//void print_huffman_tree(Huffman_tree*);
+
+	/*
+
+	bool save_huffman_tree(const char*);
+	bool read_huffman_tree(const char*);
+
+	Huffman_tree* build_huffman_tree_from_file(Huffman_tree*, vector<bool>&, vector<unsigned char>&, unsigned&, unsigned&);
+	Huffman_tree* read_huffman_tree_from_file(const char* file_name);
+
+
+	bool encode(const char*, const char*);
+	bool decode(const char*, const char*);
+
+	*/
+
 };
 
 
